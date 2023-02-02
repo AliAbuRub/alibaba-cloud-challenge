@@ -3,6 +3,7 @@ from flask import Flask, request
 import numpy as np
 import pandas as pd
 import sklearn.metrics
+import subprocess
 
 apartment_columns = ['id',
  'coords',
@@ -61,9 +62,9 @@ def return_data():
     urls = [ subprocess.run(["./ossutil64", "sign",f"oss://cdt-bucket/houses_cleaned/{apart}.jpg"], capture_output=True, text=True).stdout.split("\n\n")[0].replace('%',' ') for apart in min_distance ] 
     apartments = apartments.iloc[min_distance]
     apartments['image'] = urls
-    
-    return apartments.to_dict(orient='records')
+    apartments = apartments.to_dict(orient='records')
+    return {idx:value for idx,value in enumerate(apartments)}
 
 
 if __name__ == '__main__':
-        app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
