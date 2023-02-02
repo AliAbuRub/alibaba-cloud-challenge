@@ -63,7 +63,7 @@ def return_data():
     apartments = apartments.iloc[min_distance]
     apartments['image'] = urls
     apartments = apartments.to_dict(orient='records')
-    return {idx:value for idx,value in enumerate(apartments)}
+    return {'response': apartments}
 
 
 if __name__ == '__main__':
