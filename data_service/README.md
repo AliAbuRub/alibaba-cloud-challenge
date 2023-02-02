@@ -1,4 +1,4 @@
-# This services emulate the data source for the CDT ( Fake data )
+# This service emulates the data source for the CDT ( Fake data )
 ## Run:
 > python3 -m main
 ## Sample response:
