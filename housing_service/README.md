@@ -1,6 +1,6 @@
-# This service emulates the reccomendation of a housing unit given the CDT data & NEOM's DT.
+# This service emulates the reccomendation of a housing unit given the CDT data & NEOM's DT ( Fake data ).
 ## Run
-> python -m main
+> python3 -m main
 ## Sample response:
 ```
 [
