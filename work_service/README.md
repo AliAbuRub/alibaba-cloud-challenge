@@ -1,4 +1,4 @@
-# This services emulate the matching of a CDT and a job opportunity given the CDT data & NEOM's DT
+# This service emulates the matching of a CDT and a job opportunity given the CDT data & NEOM's DT ( Fake data )
 ## Run:
 > python3 -m main
 ## Sample response:
