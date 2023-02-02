@@ -33,6 +33,7 @@ def return_data():
         img = img.replace('%'," ")
         result= dict(zip(cdt_columns, np.array(result[0]).T))
         result['intersts'] = eval(result['intersts'])
+        result['intersts'] =  {k: result['intersts'][k] for k in list(result['intersts'])[:5]}
         result['courses'] = eval(result['courses'])
         result['image'] = img
         return result
