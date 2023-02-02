@@ -53,7 +53,7 @@ def return_data():
     dot_jobs_cdt = np.linalg.norm(jobs_values, axis=0)
     sorted_jobs = np.argsort(dot_jobs_cdt)[::-1][::5]
     sorted_jobs = jobs.iloc[sorted_jobs].to_dict(orient='records')
-    return {idx:value for idx,value in enumerate(sorted_jobs)}
+    return {'response': sorted_jobs}
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
